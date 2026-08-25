@@ -50,6 +50,7 @@ h1 {
     color: white;
     cursor: pointer;
 }
+
 #btncreatelist:hover{
     background-color: #444;
 }
@@ -77,6 +78,7 @@ h1 {
         display: flex;
         gap: 10px;
         margin-bottom: 15px;
+        
     }
     .create-task input{
         flex: 1;
@@ -114,6 +116,34 @@ h1 {
         cursor: pointer;
     }
 
-    
+.btn-excluir{
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: black;
+        color: white;
+}
 
+.btn-concluir{
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: black;
+        color: white;
+}
 
+.btn-editar{
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: black;
+        color: white;
+}
+
+.btn-concluir{
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: black;
+        color: white;
+}
