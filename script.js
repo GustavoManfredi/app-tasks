@@ -53,6 +53,7 @@ function mostrarListas() {
 
         const botaoEditar = document.createElement("button");
         botaoEditar.textContent = "Editar Lista";
+        
 
         botaoEditar.addEventListener("click", function() {
             editarLista(i);
@@ -120,6 +121,7 @@ function mostrarListas() {
          
 
             const botaoConcluir = document.createElement("button");
+            botaoConcluir.classList.add("btn-concluir")
 
             if (tarefa.concluida === true) {
                 botaoConcluir.textContent = "Desfazer";
@@ -135,7 +137,7 @@ function mostrarListas() {
 
             const botaoEditarTarefa = document.createElement("button");
             botaoEditarTarefa.textContent = "Editar";
-
+            botaoEditarTarefa.classList.add("btn-editar")
             botaoEditarTarefa.addEventListener("click", function() {
                 editarTarefa(i, j);
             });
@@ -144,6 +146,7 @@ function mostrarListas() {
            
             const botaoExcluirTarefa = document.createElement("button");
             botaoExcluirTarefa.textContent = "Excluir";
+            botaoExcluirTarefa.classList.add("btn-excluir");
 
             botaoExcluirTarefa.addEventListener("click", function() {
                 excluirTarefa(i, j);
