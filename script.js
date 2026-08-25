@@ -122,7 +122,7 @@ function mostrarListas() {
             const botaoConcluir = document.createElement("button");
 
             if (tarefa.concluida === true) {
-                botaoConcluir.textContent = "Desconcluir";
+                botaoConcluir.textContent = "Desfazer";
             } else {
                 botaoConcluir.textContent = "Concluir";
             }
