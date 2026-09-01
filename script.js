@@ -52,7 +52,9 @@ function mostrarListas() {
         divBotoes.classList.add("lista-actions");
 
         const botaoEditar = document.createElement("button");
-        botaoEditar.textContent = "Editar Lista";
+        botaoEditar.innerHTML = '<i class="bi bi-pencil"></i> Editar Lista';
+        botaoEditar.classList.add("btn-editar-lista");
+
         
 
         botaoEditar.addEventListener("click", function() {
@@ -61,7 +63,9 @@ function mostrarListas() {
 
 
         const botaoExcluir = document.createElement("button");
-        botaoExcluir.textContent = "Excluir Lista";
+        botaoExcluir.innerHTML = '<i class="bi bi-trash"></i> Excluir Lista';
+        botaoExcluir.classList.add("btn-excluir-lista");
+        
 
         botaoExcluir.addEventListener("click", function() {
             excluirLista(i);
@@ -120,37 +124,43 @@ function mostrarListas() {
 
          
 
-            const botaoConcluir = document.createElement("button");
-            botaoConcluir.classList.add("btn-concluir")
+           const botaoConcluir = document.createElement("button");
+           botaoConcluir.classList.add("btn-concluir");
 
-            if (tarefa.concluida === true) {
-                botaoConcluir.textContent = "Desfazer";
-            } else {
-                botaoConcluir.textContent = "Concluir";
-            }
+           if (tarefa.concluida === true) {
+           botaoConcluir.innerHTML = '<i class="bi bi-arrow-counterclockwise"></i> Desfazer';
+           } else {
+           botaoConcluir.innerHTML = '<i class="bi bi-check-lg"></i> Concluir';
+           }
 
-            botaoConcluir.addEventListener("click", function() {
-                concluirTarefa(i, j);
-            });
+           botaoConcluir.addEventListener("click", function() {
+           concluirTarefa(i, j);
+           });
+
 
 
 
             const botaoEditarTarefa = document.createElement("button");
-            botaoEditarTarefa.textContent = "Editar";
-            botaoEditarTarefa.classList.add("btn-editar")
+            botaoEditarTarefa.innerHTML = '<i class="bi bi-pencil"></i> Editar';
+            botaoEditarTarefa.classList.add("btn-editar");
+
             botaoEditarTarefa.addEventListener("click", function() {
                 editarTarefa(i, j);
             });
 
 
+
            
             const botaoExcluirTarefa = document.createElement("button");
-            botaoExcluirTarefa.textContent = "Excluir";
+            botaoExcluirTarefa.innerHTML = '<i class="bi bi-trash"></i> Excluir';
             botaoExcluirTarefa.classList.add("btn-excluir");
-
+            
             botaoExcluirTarefa.addEventListener("click", function() {
-                excluirTarefa(i, j);
+            excluirTarefa(i, j);
+            
             });
+
+
 
 
             divTarefa.appendChild(descricao);
@@ -265,3 +275,15 @@ function excluirTarefa(indiceLista, indiceTarefa) {
         mostrarListas();
     }
 }
+
+const btnTema = document.getElementById("btntema");
+
+btnTema.addEventListener("click", function() {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        btnTema.innerHTML = '<i class="bi bi-sun-fill"></i>';
+    } else {
+        btnTema.innerHTML = '<i class="bi bi-moon-fill"></i>';
+    }
+});
